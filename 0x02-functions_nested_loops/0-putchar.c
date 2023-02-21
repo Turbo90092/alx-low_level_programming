@@ -22,3 +22,4 @@ int main(void)
 	_putchar('\n');
 
 	retur(0);
+}	
