@@ -1,25 +1,23 @@
-# include "main.h"
-
+#include "main.h"
 
 /**
- *main -  prints _putchar, followed by a new line..
- *Description: Entry point
- *that contains the function _putchar
- *Return: 0.
+ * main - prints _putchar
+ *
+ * Description: prints _putchar
+ *
+ * Return: 0 (Success)
  */
 
 int main(void)
 {
-	char str[] = "_putchar";
-	int i;
+	char text[9] = "_putchar";
+	int i = 0;
 
-	i = 0;
-	while (str[i])
+	for (i = 0; i < 8; i++)
 	{
-		putchar(str[i]);
-		++i;
+		_putchar(text[i]);
 	}
-	putchar('\n');
+	_putchar('\n');
 
 	return (0);
 }
