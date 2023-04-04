@@ -1,28 +1,19 @@
 #include "lists.h"
-
 /**
- * print_list - check the code for Holberton School students.
- * @h: name of the list
- * Return: the number of nodes.
+ * print_listint - prints all the elements of a list.
+ * @h: head of a list.
+ *
+ * Return: numbers of nodes.
  */
-size_t print_list(const list_t *h)
+size_t print_listint(const listint_t *h)
 {
-	int c = 0;
+	size_t ct = 0;
 
-	while (h)
+	while (h != NULL)
 	{
-		if (h->str == NULL)
-		{
-			printf("[0] (nil)\n");
-		}
-		else
-		{
-		printf("[%d] %s\n", h->len, h->str);
-		}
-		c++;
+		printf("%d\n", h->n);
 		h = h->next;
+		ct++;
 	}
-	return (c);
+	return (ct);
 }
-
-
