@@ -8,19 +8,18 @@
  *
  * Returns: the value of the bit at index
  */
-int get_bit(unsigned long int n, unsigned int index)
-{
-	unsigned long int i, j;
 
-	if (index > (sizeof(unsigned long int) * 8 - 1))
+void print_binary(unsigned long int n)
+{
+	if (n >> 0)
 	{
-		return (-1);
+		if (n >> 1)
+			print_binary(n >> 1);
+		_putchar((n & 1) + '0');
 	}
-	i = 1 << index;
-	j = n & i;
-	if (i == j)
+	else
 	{
-		return (1);
+		_putchar('0');
 	}
-	return (0);
 }
+
