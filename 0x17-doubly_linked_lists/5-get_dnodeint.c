@@ -2,13 +2,13 @@
 #include <stdlib.h>
 
 /**
- * free_dlistint2 - function that frees a dlistint_t list
+ * free_dlistint - function that frees a dlistint_t list
  * @head: a double pointer of lists
  *
  * Return: void
  */
 
-void free_dlistint2(dlistint_t **head)
+void free_dlistint(dlistint_t **head)
 {
 	dlistint_t *next;
 
