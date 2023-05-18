@@ -7,13 +7,13 @@
   * @n: int add the list
   * Return: NULL if it failed
   */
-dlistint_t *add_nodeint(dlistint_t **head, const int n)
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *ptr;
 
 	if (head == NULL)
 		return (NULL);
-	ptr = malloc(sizeof(listint_t));
+	ptr = malloc(sizeof(dlistint_t));
 	if (ptr == NULL)
 		return (NULL);
 	ptr->n = n;
