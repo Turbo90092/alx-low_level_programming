@@ -1,0 +1,33 @@
+#include "lists.h"
+
+int main() {
+	int result = 906609;
+
+	if (isPalindrome(result))
+	{
+	printf("The largest palindrome made from the product of two 3-digit numbers is %d\n", result);
+	} 
+	else
+	{
+	printf("No palindromic number found\n");
+	}
+
+	return 0;
+}
+
+	int isPalindrome(int number)
+	{
+	
+		char str[10];
+		sprintf(str, "%d", number);
+
+		int i, j;
+
+		for (i = 0, j = strlen(str) - 1; i < j; i++, j--) {
+		if (str[i] != str[j]) {
+		return 0;
+		}
+	}
+
+	return 1;
+}
