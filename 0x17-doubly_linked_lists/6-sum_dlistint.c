@@ -7,16 +7,10 @@
  *
  *Return: empty
  */
-int pop_dlistint(dlistint_t **head)
+int sum_dlistint(dlistint_t *head)
 {
-	dlistint_t *start;
-	int n;
-
-	if (head == NULL || *head == NULL)
+	if (head == NULL)
 		return (0);
-	start = *head;
-	*head = start->next;
-	n = start->n;
-	free(start);
-	return (n);
+
+	return (head->n + sum_dlistint(head->next));
 }
